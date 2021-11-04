@@ -33,6 +33,8 @@ let scoreAi = 0;
 let isPause = false;
 const preference = [];
 
+let isEnd = false;
+
 function player() {
     ctx.fillStyle = 'white';
     ctx.fillRect(playerX, playerY, paddleW, paddleH);
@@ -192,6 +194,8 @@ function scoreBoard() {
 
         ballX = canW /2 - ballSize /2;
         ballY = canH /2 - ballSize /2;
+
+        isEnd = true;
         
         setTimeout(() => { clearInterval(gameInterval); }, 100);
     }
@@ -263,11 +267,26 @@ function scoreBoard() {
         ctx.fillRect(672, 54, 16, 48);
         ctx.fillRect(640, 102, 32, 16);
 
+        // W
+        ctx.fillRect(540, 140, 12, 60);
+        ctx.fillRect(552, 176, 12, 12);
+        ctx.fillRect(564, 164, 12, 12);
+        ctx.fillRect(576, 176, 12, 12);
+        ctx.fillRect(588, 140, 12, 60);
+
+        
+        // I
+        ctx.fillRect(612, 140, 36, 12);
+        ctx.fillRect(624, 152, 12, 36);
+        ctx.fillRect(368, 188, 36, 12);
+        
         aiY = 200;
         playerY = 200;
 
         ballX = canW /2 - ballSize /2;
         ballY = canH /2 - ballSize /2;
+
+        isEnd = true;
         
         setTimeout(() => { clearInterval(gameInterval); }, 100);
     }
@@ -321,7 +340,7 @@ function aiPos() {
 canv.addEventListener('click', pauseGame);
 
 function pauseGame() { 
-    if (isPause == false) {
+    if (isPause == false && isEnd == false) {
         preference.pop();
         preference.pop();
         preference.push(ballSpeedX, ballSpeedY);
