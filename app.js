@@ -30,6 +30,9 @@ let ballSpeedY = minOrPlusOne[Math.floor(Math.random() * minOrPlusOne.length)];
 let scorePlayer = 0;
 let scoreAi = 0;
 
+let isPause = false;
+const preference = [];
+
 function player() {
     ctx.fillStyle = 'white';
     ctx.fillRect(playerX, playerY, paddleW, paddleH);
@@ -296,6 +299,59 @@ function aiPos() {
       }
 }
 
+canv.addEventListener('click', pauseGame);
+
+function pauseGame() { 
+    if (isPause == false) {
+        preference.pop();
+        preference.pop();
+        preference.push(ballSpeedX, ballSpeedY);
+        ballSpeedX = 0;
+        ballSpeedY = 0;
+        isPause = true;
+
+        ctx.fillStyle = 'white';
+
+        // P
+        ctx.fillRect(356, 300, 36, 12);
+        ctx.fillRect(356, 300, 12, 60);
+        ctx.fillRect(368, 324, 24, 12);
+        ctx.fillRect(392, 312, 12, 12);
+
+        // A
+        ctx.fillRect(428, 300, 24, 12);
+        ctx.fillRect(416, 312, 12, 48);
+        ctx.fillRect(428, 324, 24, 12);
+        ctx.fillRect(452, 312, 12, 48);
+
+        // U
+        ctx.fillRect(476, 300, 12, 48);
+        ctx.fillRect(488, 348, 24, 12);
+        ctx.fillRect(512, 300, 12, 48);
+
+        // S
+        ctx.fillRect(548, 300, 36, 12);
+        ctx.fillRect(536, 312, 12, 12);
+        ctx.fillRect(548, 324, 24, 12);
+        ctx.fillRect(572, 336, 12, 12);
+        ctx.fillRect(536, 348, 36, 12);
+
+        // E
+        ctx.fillRect(596, 300, 12, 60);
+        ctx.fillRect(608, 300, 36, 12);
+        ctx.fillRect(608, 324, 24, 12);
+        ctx.fillRect(608, 348, 36, 12);
+
+        clearInterval(gameInterval);
+    } else {
+        ballSpeedX = preference[0];
+        ballSpeedY = preference[1];
+        isPause = false;
+        
+        gameInterval = setInterval(game, 1000 / 60);
+    }
+}
+
 function speedUp() {
     if (ballSpeedX > 0 && ballSpeedX < 10) {
         ballSpeedX += .4;
@@ -319,11 +375,11 @@ function pickupSound() {
 
 function game() {
     table();
-    ball();
     player();
     ai();
     scoreBoard();
     aiPos();
+    ball();
 }
 
-setInterval(game, 1000 / 60);
+gameInterval = setInterval(game, 1000 / 60);
