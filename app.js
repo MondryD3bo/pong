@@ -97,7 +97,7 @@ function table() {
     }
 }
 
-function scoreBoard() {
+async function scoreBoard() {
     ctx.fillStyle = 'white';
     if (scorePlayer === 0) {
         ctx.fillRect(422, 54, 16, 50);
@@ -167,11 +167,13 @@ function scoreBoard() {
         ctx.fillRect(390, 38, 32, 16);
         ctx.fillRect(390, 104, 32, 16);
 
-        ballSpeedX = 0;
-        ballSpeedY = 0;
+        aiY = 200;
+        playerY = 200;
 
         ballX = canW /2 - ballSize /2;
         ballY = canH /2 - ballSize /2;
+        
+        setTimeout(() => { clearInterval(gameInterval); }, 100);
     }
     if (scoreAi === 0) {
         ctx.fillRect(560, 54, 16, 50);
@@ -235,16 +237,19 @@ function scoreBoard() {
     } else if (scoreAi === 10) {
         ctx.fillRect(592, 38, 16, 80);
         ctx.fillRect(576, 54, 16, 16);
+
         ctx.fillRect(640, 38, 32, 16);
         ctx.fillRect(624, 54, 16, 48);
         ctx.fillRect(672, 54, 16, 48);
         ctx.fillRect(640, 102, 32, 16);
 
-        ballSpeedX = 0;
-        ballSpeedY = 0;
+        aiY = 200;
+        playerY = 200;
 
         ballX = canW /2 - ballSize /2;
         ballY = canH /2 - ballSize /2;
+        
+        setTimeout(() => { clearInterval(gameInterval); }, 100);
     }
 }
 
@@ -267,36 +272,30 @@ function playerPos(e) {
 function aiPos() {
     const middlePaddle = aiY + paddleH / 2;
     const middleBall = ballY + ballSize / 2;
-
+    
     if (ballX > 500) {
         if (middlePaddle - middleBall > 200) {
-            aiY -= 15;
+            aiY -= 24;
         } else if (middlePaddle - middleBall > 50) {
-            aiY -= 5;
-        } else if (middlePaddle - middleBall > -200) {
-            aiY += 15;
-        } else if (middlePaddle - middleBall > -50) {
-            aiY += 5;
+            aiY -= 10;
         }
-    } 
+
+        else if (middlePaddle - middleBall < -200) {
+            aiY += 24;
+        } else if (middlePaddle - middleBall < -50) {
+            aiY += 10;
+        }
+    }
 
     if (ballX <= 500 && ballX > 100) {
         if (middlePaddle - middleBall > 100) {
             aiY -= 3;
-        }
-         
+        } 
+
         if (middlePaddle - middleBall < -100) {
             aiY += 3;
         }
     }
-
-      if (aiY >= canH - paddleH) {
-            aiY = canH - paddleH;   
-      }
-
-      if (aiY <= 0) {
-            aiY = 0;
-      }
 }
 
 canv.addEventListener('click', pauseGame);
@@ -377,9 +376,9 @@ function game() {
     table();
     player();
     ai();
-    scoreBoard();
-    aiPos();
     ball();
+    aiPos();
+    scoreBoard();
 }
 
 gameInterval = setInterval(game, 1000 / 60);
