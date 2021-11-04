@@ -181,6 +181,12 @@ function scoreBoard() {
         ctx.fillRect(380, 152, 12, 36);
         ctx.fillRect(368, 188, 36, 12);
 
+        // N
+        ctx.fillRect(414, 140, 12, 60);
+        ctx.fillRect(426, 158, 12, 12);
+        ctx.fillRect(438, 170, 12, 12);
+        ctx.fillRect(450, 140, 12, 60);
+
         aiY = 200;
         playerY = 200;
 
