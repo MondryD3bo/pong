@@ -37,7 +37,8 @@ function player() {
     ctx.fillStyle = 'white';
     ctx.fillRect(playerX, playerY, paddleW, paddleH);
 
-    if (ballX - paddleW <= playerX && ballY >= playerY - ballSize && ballY <= playerY + paddleH){
+    if ((ballX <= playerX + paddleW) && (ballY + ballSize / 2 >= playerY) && (ballY + ballSize / 2 <= playerY + paddleH)) {
+        ballX += 5;
         ballSpeedX = -ballSpeedX;
         speedUp();
         pickupSound();
@@ -48,7 +49,8 @@ function ai() {
     ctx.fillStyle = 'white';
     ctx.fillRect(aiX, aiY, paddleW, paddleH);
 
-    if (ballX + ballSize >= aiX && ballY <= aiY + paddleH && ballY >= aiY - ballSize){
+    if ((ballX + ballSize >= aiX) && (ballY + ballSize / 2 >= aiY) && (ballY + ballSize / 2 <= aiY + paddleH)) {
+        ballX -= 5;
         ballSpeedX = -ballSpeedX;
         speedUp();
         pickupSound();
@@ -97,7 +99,7 @@ function table() {
     }
 }
 
-async function scoreBoard() {
+function scoreBoard() {
     ctx.fillStyle = 'white';
     if (scorePlayer === 0) {
         ctx.fillRect(422, 54, 16, 50);
