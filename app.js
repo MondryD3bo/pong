@@ -301,16 +301,20 @@ function scoreBoard() {
 window.addEventListener('mousemove', playerPos);
 
 function playerPos(e) {
-    topCanvas = canv.offsetTop;
+    if (isEnd == false) {
+        topCanvas = canv.offsetTop;
 
-    playerY = e.clientY - topCanvas - paddleH /2;
+        playerY = e.clientY - topCanvas - paddleH /2;
 
-    if (playerY >= canH - paddleH) {
-        playerY = canH - paddleH;
-    }
-    
-    if (playerY <= 0) {
-        playerY = 0;
+        if (playerY >= canH - paddleH) {
+            playerY = canH - paddleH;
+        }
+        
+        if (playerY <= 0) {
+            playerY = 0;
+        }
+    } else {
+        return
     }
 }
 
