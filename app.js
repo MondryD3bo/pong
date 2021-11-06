@@ -318,6 +318,25 @@ function playerPos(e) {
     }
 }
 
+window.addEventListener('keydown', playerPosKeyboard);
+
+function playerPosKeyboard(e) {
+    if (isEnd == false) {
+        topCanvas = canv.offsetTop;
+
+        switch (e.keyCode) {
+            case 87:
+                playerY -= 10;
+                break;
+            case 83:
+                playerY += 10;
+                break;
+        }
+    } else {
+        return
+    }
+}
+
 function aiPos() {
     const middlePaddle = aiY + paddleH / 2;
     const middleBall = ballY + ballSize / 2;
