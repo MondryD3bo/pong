@@ -318,25 +318,6 @@ function playerPos(e) {
     }
 }
 
-window.addEventListener('keydown', playerPosKeyboard);
-
-function playerPosKeyboard(e) {
-    if (isEnd == false) {
-        topCanvas = canv.offsetTop;
-
-        switch (e.keyCode) {
-            case 87:
-                playerY -= 10;
-                break;
-            case 83:
-                playerY += 10;
-                break;
-        }
-    } else {
-        return
-    }
-}
-
 function aiPos() {
     const middlePaddle = aiY + paddleH / 2;
     const middleBall = ballY + ballSize / 2;
@@ -368,14 +349,10 @@ function aiPos() {
 
 canv.addEventListener('click', pauseGame);
 
-function pauseGame() { 
+function pauseGame(e) { 
     if (isPause == false && isEnd == false) {
-        preference.pop();
-        preference.pop();
-        preference.push(ballSpeedX, ballSpeedY);
-        ballSpeedX = 0;
-        ballSpeedY = 0;
         isPause = true;
+        console.log(e);
 
         ctx.fillStyle = 'white';
 
@@ -410,9 +387,7 @@ function pauseGame() {
         ctx.fillRect(608, 348, 36, 12);
 
         clearInterval(gameInterval);
-    } else {
-        ballSpeedX = preference[0];
-        ballSpeedY = preference[1];
+    } else if (isPause == true && isEnd == false) {
         isPause = false;
         
         gameInterval = setInterval(game, 1000 / 60);
