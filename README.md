@@ -5,9 +5,7 @@ This is my small experiment that mimics the JavaScript version of the classic Po
  * You can find code here [code here](https://github.com/MondryD3bo/pong.git)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Notes
-=======
-## Notest
->>>>>>> 4991f1e8a5b862c93d734077f5fdef86ffe04e09
 
  * It does not support mobile devices 
