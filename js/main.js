@@ -31,7 +31,6 @@ let scorePlayer = 0;
 let scoreAi = 0;
 
 let isPause = false;
-const preference = [];
 
 let isEnd = false;
 
@@ -43,7 +42,7 @@ function player() {
         ballX += 5;
         ballSpeedX = -ballSpeedX;
         speedUp();
-        pickupSound();
+        playSound('./assets/audio/paddle.mp3');
     }
 }
 
@@ -55,7 +54,7 @@ function ai() {
         ballX -= 5;
         ballSpeedX = -ballSpeedX;
         speedUp();
-        pickupSound();
+        playSound('./assets/audio/paddle.mp3');
     }
 }
 
@@ -69,7 +68,7 @@ function ball() {
     if (ballY <= 0 || ballY + ballSize >= canH) {
         ballSpeedY = -ballSpeedY;
         speedUp();
-        pickupSound();
+        playSound('./assets/audio/wall.mp3');
     }
 
     if (ballX <= 0) {
@@ -80,6 +79,7 @@ function ball() {
 
         ballX = canW /2 - ballSize /2;
         ballY = canH /2 - ballSize /2;
+        playSound('./assets/audio/score.mp3');
     } else if (ballX >= canW) {
         scorePlayer += 1;
 
@@ -88,6 +88,7 @@ function ball() {
 
         ballX = canW /2 - ballSize /2;
         ballY = canH /2 - ballSize /2;
+        playSound('./assets/audio/score.mp3');
      }
 }
 
@@ -410,8 +411,8 @@ function speedUp() {
     }
 }
 
-function pickupSound() {
-    const sound = new Audio('./assets/audio/pickup.mp3');
+function playSound(audio) {
+    const sound = new Audio(audio);
     sound.play();
 }
 
