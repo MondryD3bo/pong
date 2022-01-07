@@ -325,25 +325,25 @@ function aiPos() {
   
   if (ballX > 500) {
       if (middlePaddle - middleBall > 200) {
-          aiY -= 24;
+          aiY -= 15.5;
       } else if (middlePaddle - middleBall > 50) {
-          aiY -= 10;
+          aiY -= 6.5;
       }
 
       else if (middlePaddle - middleBall < -200) {
-          aiY += 24;
+          aiY += 15.5;
       } else if (middlePaddle - middleBall < -50) {
-          aiY += 10;
+          aiY += 6.5;
       }
   }
 
   if (ballX <= 500 && ballX > 100) {
       if (middlePaddle - middleBall > 100) {
-          aiY -= 3;
+          aiY -= 2.5;
       } 
 
       if (middlePaddle - middleBall < -100) {
-          aiY += 3;
+          aiY += 2.5;
       }
   }
 }
