@@ -8,3 +8,6 @@ This is my small experiment that mimics the JavaScript version of the classic Po
 ## Notes
 
  * It does not support mobile devices 
+
+## Licence
+MIT

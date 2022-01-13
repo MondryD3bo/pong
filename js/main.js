@@ -103,200 +103,201 @@ function table() {
 }
 
 function scoreBoard() {
-  ctx.fillStyle = 'white';
-  if (scorePlayer === 0) {
-      ctx.fillRect(422, 54, 16, 50);
-      ctx.fillRect(374, 54, 16, 50);
-      ctx.fillRect(390, 38, 32, 16);
-      ctx.fillRect(390, 104, 32, 16);
-  } else if (scorePlayer === 1) {
-      ctx.fillRect(406, 38, 16, 80);
-      ctx.fillRect(390, 54, 16, 16);
-  } else if (scorePlayer === 2) {
-      ctx.fillRect(374, 54, 16, 16);
-      ctx.fillRect(390, 38, 32, 16);
-      ctx.fillRect(422, 54, 16, 16);
-      ctx.fillRect(406, 70, 16, 16);
-      ctx.fillRect(390, 86, 16, 16);
-      ctx.fillRect(374, 102, 64, 16);
-  } else if (scorePlayer === 3) {
-      ctx.fillRect(374, 54, 16, 16);
-      ctx.fillRect(390, 38, 32, 16);
-      ctx.fillRect(422, 54, 16, 16);
-      ctx.fillRect(406, 70, 16, 16);
-      ctx.fillRect(374, 86, 16, 16);
-      ctx.fillRect(422, 86, 16, 16);
-      ctx.fillRect(390, 102, 32, 16);
-  } else if (scorePlayer === 4) {
-      ctx.fillRect(406, 38, 16, 80);
-      ctx.fillRect(390, 54, 16, 16);
-      ctx.fillRect(374, 70, 16, 16);
-      ctx.fillRect(374, 86, 64, 16);
-  } else if (scorePlayer === 5) {
-      ctx.fillRect(374, 38, 64, 16);
-      ctx.fillRect(374, 54, 16, 32);
-      ctx.fillRect(390, 70, 32, 16);
-      ctx.fillRect(422, 86, 16, 16);
-      ctx.fillRect(374, 102, 48, 16)
-  } else if (scorePlayer === 6) {
-      ctx.fillRect(390, 38, 32, 16);
-      ctx.fillRect(374, 54, 16, 48);
-      ctx.fillRect(390, 70, 32, 16);
-      ctx.fillRect(422, 86, 16, 16);
-      ctx.fillRect(390, 102, 32, 16);
-  } else if (scorePlayer === 7) {
-      ctx.fillRect(374, 38, 64, 16);
-      ctx.fillRect(422, 54, 16, 32);
-      ctx.fillRect(406, 86, 16, 32);
-  } else if (scorePlayer === 8) {
-      ctx.fillRect(390, 38, 32, 16);
-      ctx.fillRect(374, 54, 16, 16);
-      ctx.fillRect(422, 54, 16, 16);
-      ctx.fillRect(390, 70, 32, 16);
-      ctx.fillRect(374, 86, 16, 16);
-      ctx.fillRect(422, 86, 16, 16);
-      ctx.fillRect(390, 102, 32, 16);
-  } else if (scorePlayer === 9) {
-      ctx.fillRect(390, 38, 32, 16);
-      ctx.fillRect(374, 54, 16, 16);
-      ctx.fillRect(422, 54, 16, 16);
-      ctx.fillRect(390, 70, 48, 16);
-      ctx.fillRect(422, 86, 16, 16);
-      ctx.fillRect(390, 102, 32, 16);
-  } else if (scorePlayer === 10) {
-      ctx.fillRect(342, 38, 16, 80);
-      ctx.fillRect(326, 54, 16, 16);
+    ctx.fillStyle = 'white';
 
-      ctx.fillRect(422, 54, 16, 50);
-      ctx.fillRect(374, 54, 16, 50);
-      ctx.fillRect(390, 38, 32, 16);
-      ctx.fillRect(390, 104, 32, 16);
+    if (scorePlayer === 0) {
+        ctx.fillRect(422, 54, 16, 50);
+        ctx.fillRect(374, 54, 16, 50);
+        ctx.fillRect(390, 38, 32, 16);
+        ctx.fillRect(390, 104, 32, 16);
+    } else if (scorePlayer === 1) {
+        ctx.fillRect(406, 38, 16, 80);
+        ctx.fillRect(390, 54, 16, 16);
+    } else if (scorePlayer === 2) {
+        ctx.fillRect(374, 54, 16, 16);
+        ctx.fillRect(390, 38, 32, 16);
+        ctx.fillRect(422, 54, 16, 16);
+        ctx.fillRect(406, 70, 16, 16);
+        ctx.fillRect(390, 86, 16, 16);
+        ctx.fillRect(374, 102, 64, 16);
+    } else if (scorePlayer === 3) {
+        ctx.fillRect(374, 54, 16, 16);
+        ctx.fillRect(390, 38, 32, 16);
+        ctx.fillRect(422, 54, 16, 16);
+        ctx.fillRect(406, 70, 16, 16);
+        ctx.fillRect(374, 86, 16, 16);
+        ctx.fillRect(422, 86, 16, 16);
+        ctx.fillRect(390, 102, 32, 16);
+    } else if (scorePlayer === 4) {
+        ctx.fillRect(406, 38, 16, 80);
+        ctx.fillRect(390, 54, 16, 16);
+        ctx.fillRect(374, 70, 16, 16);
+        ctx.fillRect(374, 86, 64, 16);
+    } else if (scorePlayer === 5) {
+        ctx.fillRect(374, 38, 64, 16);
+        ctx.fillRect(374, 54, 16, 32);
+        ctx.fillRect(390, 70, 32, 16);
+        ctx.fillRect(422, 86, 16, 16);
+        ctx.fillRect(374, 102, 48, 16)
+    } else if (scorePlayer === 6) {
+        ctx.fillRect(390, 38, 32, 16);
+        ctx.fillRect(374, 54, 16, 48);
+        ctx.fillRect(390, 70, 32, 16);
+        ctx.fillRect(422, 86, 16, 16);
+        ctx.fillRect(390, 102, 32, 16);
+    } else if (scorePlayer === 7) {
+        ctx.fillRect(374, 38, 64, 16);
+        ctx.fillRect(422, 54, 16, 32);
+        ctx.fillRect(406, 86, 16, 32);
+    } else if (scorePlayer === 8) {
+        ctx.fillRect(390, 38, 32, 16);
+        ctx.fillRect(374, 54, 16, 16);
+        ctx.fillRect(422, 54, 16, 16);
+        ctx.fillRect(390, 70, 32, 16);
+        ctx.fillRect(374, 86, 16, 16);
+        ctx.fillRect(422, 86, 16, 16);
+        ctx.fillRect(390, 102, 32, 16);
+    } else if (scorePlayer === 9) {
+        ctx.fillRect(390, 38, 32, 16);
+        ctx.fillRect(374, 54, 16, 16);
+        ctx.fillRect(422, 54, 16, 16);
+        ctx.fillRect(390, 70, 48, 16);
+        ctx.fillRect(422, 86, 16, 16);
+        ctx.fillRect(390, 102, 32, 16);
+    } else if (scorePlayer === 10) {
+        ctx.fillRect(342, 38, 16, 80);
+        ctx.fillRect(326, 54, 16, 16);
 
-      // W
-      ctx.fillRect(294, 140, 12, 60);
-      ctx.fillRect(306, 176, 12, 12);
-      ctx.fillRect(318, 164, 12, 12);
-      ctx.fillRect(330, 176, 12, 12);
-      ctx.fillRect(342, 140, 12, 60);
+        ctx.fillRect(422, 54, 16, 50);
+        ctx.fillRect(374, 54, 16, 50);
+        ctx.fillRect(390, 38, 32, 16);
+        ctx.fillRect(390, 104, 32, 16);
 
-      // I
-      ctx.fillRect(368, 140, 36, 12);
-      ctx.fillRect(380, 152, 12, 36);
-      ctx.fillRect(368, 188, 36, 12);
+        // W
+        ctx.fillRect(294, 140, 12, 60);
+        ctx.fillRect(306, 176, 12, 12);
+        ctx.fillRect(318, 164, 12, 12);
+        ctx.fillRect(330, 176, 12, 12);
+        ctx.fillRect(342, 140, 12, 60);
 
-      // N
-      ctx.fillRect(414, 140, 12, 60);
-      ctx.fillRect(426, 158, 12, 12);
-      ctx.fillRect(438, 170, 12, 12);
-      ctx.fillRect(450, 140, 12, 60);
+        // I
+        ctx.fillRect(368, 140, 36, 12);
+        ctx.fillRect(380, 152, 12, 36);
+        ctx.fillRect(368, 188, 36, 12);
 
-      aiY = 200;
-      playerY = 200;
+        // N
+        ctx.fillRect(414, 140, 12, 60);
+        ctx.fillRect(426, 158, 12, 12);
+        ctx.fillRect(438, 170, 12, 12);
+        ctx.fillRect(450, 140, 12, 60);
 
-      ballX = canW /2 - ballSize /2;
-      ballY = canH /2 - ballSize /2;
+        aiY = 200;
+        playerY = 200;
 
-      isEnd = true;
-      
-      setTimeout(() => { clearInterval(gameInterval); }, 100);
-  }
-  if (scoreAi === 0) {
-      ctx.fillRect(560, 54, 16, 50);
-      ctx.fillRect(608, 54, 16, 50);
-      ctx.fillRect(576, 38, 32, 16);
-      ctx.fillRect(576, 104, 32, 16);
-  } else if (scoreAi === 1) {
-      ctx.fillRect(592, 38, 16, 80);
-      ctx.fillRect(576, 54, 16, 16);
-  } else if (scoreAi === 2) {
-      ctx.fillRect(560, 54, 16, 16);
-      ctx.fillRect(576, 38, 32, 16);
-      ctx.fillRect(608, 54, 16, 16);
-      ctx.fillRect(592, 70, 16, 16);
-      ctx.fillRect(576, 86, 16, 16);
-      ctx.fillRect(560, 102, 64, 16);
-  } else if (scoreAi === 3) {
-      ctx.fillRect(560, 54, 16, 16);
-      ctx.fillRect(576, 38, 32, 16);
-      ctx.fillRect(608, 54, 16, 16);
-      ctx.fillRect(592, 70, 16, 16);
-      ctx.fillRect(560, 86, 16, 16);
-      ctx.fillRect(608, 86, 16, 16);
-      ctx.fillRect(576, 102, 32, 16);
-  } else if (scoreAi === 4) {
-      ctx.fillRect(592, 38, 16, 80);
-      ctx.fillRect(576, 54, 16, 16);
-      ctx.fillRect(560, 70, 16, 16);
-      ctx.fillRect(560, 86, 64, 16);
-  } else if (scoreAi === 5) {
-      ctx.fillRect(560, 38, 64, 16);
-      ctx.fillRect(560, 54, 16, 32);
-      ctx.fillRect(576, 70, 32, 16);
-      ctx.fillRect(608, 86, 16, 16);
-      ctx.fillRect(560, 102, 48, 16)
-  } else if (scoreAi === 6) {
-      ctx.fillRect(576, 38, 32, 16);
-      ctx.fillRect(560, 54, 16, 48);
-      ctx.fillRect(576, 70, 32, 16);
-      ctx.fillRect(608, 86, 16, 16);
-      ctx.fillRect(576, 102, 32, 16);
-  } else if (scoreAi === 7) {
-      ctx.fillRect(560, 38, 64, 16);
-      ctx.fillRect(608, 54, 16, 32);
-      ctx.fillRect(592, 86, 16, 32);
-  } else if (scoreAi === 8) {
-      ctx.fillRect(560, 54, 16, 16);
-      ctx.fillRect(576, 38, 32, 16);
-      ctx.fillRect(608, 54, 16, 16);
-      ctx.fillRect(576, 70, 32, 16);
-      ctx.fillRect(560, 86, 16, 16);
-      ctx.fillRect(608, 86, 16, 16);
-      ctx.fillRect(576, 102, 32, 16);
-  } else if (scoreAi === 9) {
-      ctx.fillRect(560, 54, 16, 16);
-      ctx.fillRect(576, 38, 32, 16);
-      ctx.fillRect(608, 54, 16, 16);
-      ctx.fillRect(576, 70, 48, 16);
-      ctx.fillRect(608, 86, 16, 16);
-      ctx.fillRect(576, 102, 32, 16);
-  } else if (scoreAi === 10) {
-      ctx.fillRect(592, 38, 16, 80);
-      ctx.fillRect(576, 54, 16, 16);
+        ballX = canW /2 - ballSize /2;
+        ballY = canH /2 - ballSize /2;
 
-      ctx.fillRect(640, 38, 32, 16);
-      ctx.fillRect(624, 54, 16, 48);
-      ctx.fillRect(672, 54, 16, 48);
-      ctx.fillRect(640, 102, 32, 16);
+        isEnd = true;
+        
+        setTimeout(() => { clearInterval(gameInterval); }, 100);
+    }
+    if (scoreAi === 0) {
+        ctx.fillRect(560, 54, 16, 50);
+        ctx.fillRect(608, 54, 16, 50);
+        ctx.fillRect(576, 38, 32, 16);
+        ctx.fillRect(576, 104, 32, 16);
+    } else if (scoreAi === 1) {
+        ctx.fillRect(592, 38, 16, 80);
+        ctx.fillRect(576, 54, 16, 16);
+    } else if (scoreAi === 2) {
+        ctx.fillRect(560, 54, 16, 16);
+        ctx.fillRect(576, 38, 32, 16);
+        ctx.fillRect(608, 54, 16, 16);
+        ctx.fillRect(592, 70, 16, 16);
+        ctx.fillRect(576, 86, 16, 16);
+        ctx.fillRect(560, 102, 64, 16);
+    } else if (scoreAi === 3) {
+        ctx.fillRect(560, 54, 16, 16);
+        ctx.fillRect(576, 38, 32, 16);
+        ctx.fillRect(608, 54, 16, 16);
+        ctx.fillRect(592, 70, 16, 16);
+        ctx.fillRect(560, 86, 16, 16);
+        ctx.fillRect(608, 86, 16, 16);
+        ctx.fillRect(576, 102, 32, 16);
+    } else if (scoreAi === 4) {
+        ctx.fillRect(592, 38, 16, 80);
+        ctx.fillRect(576, 54, 16, 16);
+        ctx.fillRect(560, 70, 16, 16);
+        ctx.fillRect(560, 86, 64, 16);
+    } else if (scoreAi === 5) {
+        ctx.fillRect(560, 38, 64, 16);
+        ctx.fillRect(560, 54, 16, 32);
+        ctx.fillRect(576, 70, 32, 16);
+        ctx.fillRect(608, 86, 16, 16);
+        ctx.fillRect(560, 102, 48, 16)
+    } else if (scoreAi === 6) {
+        ctx.fillRect(576, 38, 32, 16);
+        ctx.fillRect(560, 54, 16, 48);
+        ctx.fillRect(576, 70, 32, 16);
+        ctx.fillRect(608, 86, 16, 16);
+        ctx.fillRect(576, 102, 32, 16);
+    } else if (scoreAi === 7) {
+        ctx.fillRect(560, 38, 64, 16);
+        ctx.fillRect(608, 54, 16, 32);
+        ctx.fillRect(592, 86, 16, 32);
+    } else if (scoreAi === 8) {
+        ctx.fillRect(560, 54, 16, 16);
+        ctx.fillRect(576, 38, 32, 16);
+        ctx.fillRect(608, 54, 16, 16);
+        ctx.fillRect(576, 70, 32, 16);
+        ctx.fillRect(560, 86, 16, 16);
+        ctx.fillRect(608, 86, 16, 16);
+        ctx.fillRect(576, 102, 32, 16);
+    } else if (scoreAi === 9) {
+        ctx.fillRect(560, 54, 16, 16);
+        ctx.fillRect(576, 38, 32, 16);
+        ctx.fillRect(608, 54, 16, 16);
+        ctx.fillRect(576, 70, 48, 16);
+        ctx.fillRect(608, 86, 16, 16);
+        ctx.fillRect(576, 102, 32, 16);
+    } else if (scoreAi === 10) {
+        ctx.fillRect(592, 38, 16, 80);
+        ctx.fillRect(576, 54, 16, 16);
 
-      // W
-      ctx.fillRect(540, 140, 12, 60);
-      ctx.fillRect(552, 176, 12, 12);
-      ctx.fillRect(564, 164, 12, 12);
-      ctx.fillRect(576, 176, 12, 12);
-      ctx.fillRect(588, 140, 12, 60);
+        ctx.fillRect(640, 38, 32, 16);
+        ctx.fillRect(624, 54, 16, 48);
+        ctx.fillRect(672, 54, 16, 48);
+        ctx.fillRect(640, 102, 32, 16);
 
-      
-      // I
-      ctx.fillRect(612, 140, 36, 12);
-      ctx.fillRect(624, 152, 12, 36);
-      ctx.fillRect(612, 188, 36, 12);
+        // W
+        ctx.fillRect(540, 140, 12, 60);
+        ctx.fillRect(552, 176, 12, 12);
+        ctx.fillRect(564, 164, 12, 12);
+        ctx.fillRect(576, 176, 12, 12);
+        ctx.fillRect(588, 140, 12, 60);
 
-      // N
-      ctx.fillRect(660, 140, 12, 60);
-      ctx.fillRect(672, 158, 12, 12);
-      ctx.fillRect(684, 170, 12, 12);
-      ctx.fillRect(696, 140, 12, 60);
-      
-      aiY = 200;
-      playerY = 200;
+        
+        // I
+        ctx.fillRect(612, 140, 36, 12);
+        ctx.fillRect(624, 152, 12, 36);
+        ctx.fillRect(612, 188, 36, 12);
 
-      ballX = canW /2 - ballSize /2;
-      ballY = canH /2 - ballSize /2;
+        // N
+        ctx.fillRect(660, 140, 12, 60);
+        ctx.fillRect(672, 158, 12, 12);
+        ctx.fillRect(684, 170, 12, 12);
+        ctx.fillRect(696, 140, 12, 60);
+        
+        aiY = 200;
+        playerY = 200;
 
-      isEnd = true;
-      
-      setTimeout(() => { clearInterval(gameInterval); }, 100);
-  }
+        ballX = canW /2 - ballSize /2;
+        ballY = canH /2 - ballSize /2;
+
+        isEnd = true;
+        
+        setTimeout(() => { clearInterval(gameInterval); }, 100);
+    }
 }
 
 window.addEventListener('mousemove', playerPos);
